@@ -27,10 +27,8 @@ time.sleep(2.8)
 inputElement = driver.find_element_by_class_name("check-room-input")
 inputElement.send_keys(gamepin)
 inputElement.send_keys(Keys.ENTER)
-time.sleep(2.5)
+time.sleep(1)
 #    invalidpinbox = driver.find_element_by_class_name("content right error")
-
-
 
 invalidcode = driver.find_elements_by_xpath("//div[@class='content right error']")
 errorcode = driver.find_elements_by_xpath("//div[@class='An error has occured. Please Try Again.']")
@@ -44,6 +42,9 @@ if invalidcode[0].is_displayed():
     #sys.exit(" 1 ")
 else:
     #print ("Game PIN is valid!")
+    inputElement = driver.find_element_by_class_name("check-player-input")
+    inputElement.send_keys("testbot")
+    inputElement.send_keys(Keys.ENTER)
     subprocess.call('echo Game PIN valid!',shell=True)
     sys.stdout.write("Game PIN valid!")
     sys.stdout.flush()
