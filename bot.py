@@ -23,7 +23,6 @@ chrome_options.add_argument("--disable-dev-shm-usage")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
 driver.get('https://quizizz.com/join/')
-time.sleep(2.8)
 #driver.save_screenshot("screenshot.png")
 inputElement = driver.find_element_by_class_name("check-room-input")
 inputElement.send_keys(gamepin)
