@@ -44,7 +44,7 @@ if invalidcode[0].is_displayed():
 else:
     #print ("Game PIN is valid!")
     inputElement = driver.find_element_by_class_name("check-player-input")
-    inputElement.send_keys("testbot")
+    inputElement.send_keys(random.randrange(0000000,9999999))
     inputElement.send_keys(Keys.ENTER)
     subprocess.call('echo Game PIN valid!',shell=True)
     sys.stdout.write("Game PIN valid!")
