@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os, time, json, requests, sys, random, string, tkinter, subprocess, tempfile
+import os, time, json, requests, sys, random, string, subprocess, tempfile
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
